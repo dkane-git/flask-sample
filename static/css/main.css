@@ -1,0 +1,78 @@
+body html{
+    margin: 0;
+    font-family: sans-serif;
+}
+body {
+    font-family: helvetica, arial, sans-serif;
+}
+h1 {
+    font-weight: bold;
+}
+
+.content {
+    margin: 0 auto;
+    width: 400px;
+}
+
+table, td, th {
+    
+    background-color: cyan;
+}
+
+table {
+    width: 109%;
+    border-radius: 6px;
+    border: 3px solid rgb(164, 12, 235);
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    border-top: 3px solid rgb(164, 12, 235);
+}
+td:hover {
+    background-color: yellow;
+  }
+th:hover {
+    background-color:  rgb(164, 12, 235);
+  }
+
+form {
+    margin-bottom: 25px;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: cyan;
+    display: inline-block;
+    width: 100%;
+    border-radius: 6px;
+    border: 3px solid rgb(164, 12, 235);
+  }
+button {
+    width: auto;
+    height: auto;
+    font-size: 15px;
+    border-radius: 3px;
+    background-color: lightgrey;
+    border: 1px solid grey;
+    box-shadow: 2px 2px teal;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: yellow;
+  }
+  .action-button {
+      margin-top: 4px;
+      margin-bottom: 4px;
+  }
+  .action-button:hover {
+    background-color: rgb(164, 12, 235);
+}
+
+#content {
+    width: 70%;
+}

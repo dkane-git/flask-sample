@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Enter your name if you like to party (つ▀¯▀)つ</h1>
+    {% if tasks|length < 1 %}
+    <h4 style="text-align: center">There are currently no party people :(... Enter your name to start a party!</h4>
+    {% else %}
+    <table>
+        <tr>
+            <th>Party Person</th>
+            <th>Date Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <button class="action-button" onclick="location.href='/delete/{{task.id}}'">Delete</button>
+                    <br>
+                    <button class="action-button" onclick="location.href='/update/{{task.id}}'">Update</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content" placeholder="Type name here!">
+            <button type="submit">I like to party!</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
